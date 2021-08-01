@@ -5,8 +5,7 @@ package com.pack.learn.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pack.learn.model.dto.User;
@@ -22,7 +21,7 @@ public class UsersController {
 	 * REST end point to fetch the list of users
 	 * @return
 	 */
-	@RequestMapping(method = RequestMethod.GET, path = "/users")
+	@GetMapping(path = "/users")
 	public ResponseEntity<User> fetchUsers() {
 		
 		return ResponseEntity.status(HttpStatus.OK).body(User.builder()
