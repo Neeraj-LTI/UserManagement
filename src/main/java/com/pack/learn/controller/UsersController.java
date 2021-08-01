@@ -18,6 +18,10 @@ import com.pack.learn.model.dto.User;
 @RestController
 public class UsersController {
 
+	/**
+	 * REST end point to fetch the list of users
+	 * @return
+	 */
 	@RequestMapping(method = RequestMethod.GET, path = "/users")
 	public ResponseEntity<User> fetchUsers() {
 		
